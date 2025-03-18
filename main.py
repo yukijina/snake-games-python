@@ -9,7 +9,12 @@ screen.title("Snake game 🐍")
 screen.tracer(0)
 
 snake = Snake()
-print(snake)
+
+screen.listen()
+screen.onkey(snake.move_up, "Up")
+screen.onkey(snake.move_down, "Down")
+screen.onkey(snake.move_left, "Left")
+screen.onkey(snake.move_right, "Right")
 
 
 is_game_on = True
