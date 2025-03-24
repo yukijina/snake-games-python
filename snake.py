@@ -28,6 +28,15 @@ class Snake:
     snake.goto(position)
     self.snakes.append(snake)
     
+  def reset(self):
+    """reset snakes when the game is over"""
+    for seg in self.snakes:
+      seg.goto(1000, 1000) #put snake off the screen
+      
+    self.snakes.clear()
+    self.create_snake()
+    self.head = self.snakes[0]
+    
   def extend(self):
     """extend snake. add a snake at the last position"""
     self.add_snake(self.snakes[-1].position())
