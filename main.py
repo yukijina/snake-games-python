@@ -13,7 +13,6 @@ screen.tracer(0)
 snake = Snake()
 food = Food()
 scoreboard  = Scoreboard()
-print(scoreboard)
 
 screen.listen()
 screen.onkey(snake.move_up, "Up")
@@ -48,12 +47,5 @@ while is_game_on:
     elif snake.head.distance(segment) < 10:
       scoreboard.reset()
       snake.reset()
-  
-  
-    
-    
-  
-
-
 
 screen.exitonclick()
